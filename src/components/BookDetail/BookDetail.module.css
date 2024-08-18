@@ -1,0 +1,81 @@
+@screen pc {
+  .book_detail {
+    @apply grid grid-cols-2
+  }
+  .book_detail > div:nth-child(1) {
+    @apply flex items-center;
+  }
+  .book_detail > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+  .book_detail > div:nth-child(2) > div {
+    @apply flex items-center;
+  }
+  .book_detail > div:nth-child(2) > div > h1 {
+    @apply text-[20px]
+  }
+  .book_detail > div:nth-child(2) > div > span {
+    @apply flex items-center text-nowrap
+  }
+  .book_detail > div:nth-child(2) > p {
+    @apply mt-[10px]
+  }
+
+  .book_detail > div:nth-child(3){
+    @apply flex justify-center
+  }
+  .book_detail > div:nth-child(3) > button {
+    @apply px-[4px]
+  }
+}
+
+@screen tablet {
+  .book_detail {
+    @apply grid grid-cols-2
+  }
+  .book_detail > div:nth-child(1) {
+    @apply flex items-center;
+  }
+  .book_detail > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+  .book_detail > div:nth-child(2) > div {
+    @apply flex items-center;
+  }
+  .book_detail > div:nth-child(2) > div > h1 {
+    @apply text-[20px]
+  }
+  .book_detail > div:nth-child(2) > div > span {
+    @apply flex items-center text-nowrap
+  }
+  .book_detail > div:nth-child(2) > p {
+    @apply mt-[10px]
+  }
+}
+
+@screen mobile {
+  .book_detail {
+    @apply grid grid-cols-1
+  }
+  .book_detail > div:nth-child(1) {
+    @apply flex items-center justify-center;
+  }
+  .book_detail > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+  .book_detail > div:nth-child(2) > div {
+    @apply mt-[10px]
+  }
+  .book_detail > div:nth-child(2) > div > h1 {
+    @apply flex justify-center text-[20px]
+  }
+  .book_detail > div:nth-child(2) > div > span {
+    @apply flex justify-center items-center
+  }
+  .book_detail > div:nth-child(2) > p {
+    @apply mt-[10px] flex justify-center
+  }
+}

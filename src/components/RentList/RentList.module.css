@@ -1,0 +1,6 @@
+.rent_list > li {
+  @apply my-[10px] p-[10px] rounded-md border flex justify-between
+}
+.rent_list > li > div > button {
+  @apply px-[4px] text-red-600
+}

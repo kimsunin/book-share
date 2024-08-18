@@ -1,0 +1,40 @@
+.header {
+  @apply w-full h-[80px] mb-[40px];
+}
+
+.header > div {
+  @apply w-full h-[40px] flex justify-between items-center
+}
+
+.header > div > div > span {
+  @apply text-[20px]
+}
+
+.header > div > div > button {
+  @apply w-[40px] h-[40px]
+}
+.header > div > div > a {
+  @apply w-[40px] h-[40px]
+}
+
+
+.off {
+  @apply h-0 duration-300
+}
+.on {
+  @apply h-[40px] duration-300 border rounded-md
+}
+.header > form {
+  @apply w-full overflow-hidden
+}
+.header > form > input {
+  @apply w-full h-full border-none text-[14px]
+}
+
+
+
+
+
+
+
+

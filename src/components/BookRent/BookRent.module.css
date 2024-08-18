@@ -1,0 +1,6 @@
+.book_rent{
+  @apply mt-[40px] flex justify-center
+}
+.book_rent > button {
+  @apply px-[4px]
+}

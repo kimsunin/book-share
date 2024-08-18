@@ -1,0 +1,32 @@
+.list_item {
+  @apply mb-[10px]
+}
+.list_item > a {
+  @apply w-full h-[100px] flex
+}
+.list_item > a > div:nth-child(1) {
+  @apply w-[20%] h-full
+}
+.list_item > a > div:nth-child(1) > div {
+  @apply w-full h-full rounded-l-md
+}
+.list_item > a > div:nth-child(2) {
+  @apply w-[80%] h-full p-[10px] rounded-r-md border
+}
+.list_item > a > div:nth-child(2) > div {
+  @apply w-full flex justify-between
+}
+.list_item > a > div:nth-child(2) > div > div {
+  @apply flex items-center min-w-0
+}
+.list_item > a > div:nth-child(2) > div > div > h1 {
+  @apply w-full overflow-hidden text-ellipsis text-nowrap
+}
+.list_item > a > div:nth-child(2) > div > span {
+  @apply text-nowrap text-[14px]
+}
+.list_item > a > div:nth-child(2) > p {
+  @apply w-full mt-[6px] overflow-hidden text-ellipsis text-nowrap text-[14px];
+}
+
+

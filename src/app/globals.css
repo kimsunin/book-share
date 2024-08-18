@@ -2,32 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply scroll-smooth text-black/80 dark:text-white/60;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+article {
+  @apply mt-[20px]
 }
+
+a,
+button {
+  @apply duration-300 rounded-md inline-flex items-center justify-center;
+  transition-property: background-color, transform;
+}
+a:hover,
+button:hover {
+  @apply duration-300 scale-105 bg-black/5 dark:bg-white/10;
+  transition-property: background-color, transform;
+}
+
+
+input {
+  @apply px-[10px] outline-none rounded-md border border-black/5 dark:border-white/10
+}
+
+form {
+  @apply border-black/10 dark:border-white/10
+}
+
+hr {
+  @apply my-[20px] border-black/10 dark:border-white/10
+}
+
+.isvisible {
+  @apply opacity-100 duration-1000;
+}
+.isinvisible {
+  @apply opacity-0;
+}
+
+
+

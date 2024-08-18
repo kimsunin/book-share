@@ -1,0 +1,83 @@
+@screen pc{
+  .profile {
+    @apply grid grid-cols-2
+  }
+
+  .profile > div:nth-child(1) {
+    @apply items-center;
+  }
+
+  .profile > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+  .profile > div:nth-child(2) > h1 {
+    @apply text-[20px]
+  }
+
+  .profile > div:nth-child(2) > p {
+    @apply mt-[10px]
+  }
+  .profile > div:nth-child(2) > div {
+    @apply mt-[10px]
+  }
+  .profile > div:nth-child(2) > div > button {
+    @apply px-[4px]
+  }
+}
+
+@screen tablet{
+  .profile {
+    @apply grid grid-cols-2
+  }
+
+  .profile > div:nth-child(1) {
+    @apply items-center;
+  }
+
+  .profile > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+  .profile > div:nth-child(2) > h1 {
+    @apply text-[20px]
+  }
+
+  .profile > div:nth-child(2) > p {
+    @apply mt-[10px]
+  }
+  .profile > div:nth-child(2) > div {
+    @apply mt-[10px]
+  }
+  .profile > div:nth-child(2) > div > button {
+    @apply px-[4px]
+  }
+}
+
+@screen mobile{
+  .profile {
+    @apply grid grid-cols-1
+  }
+
+  .profile > div:nth-child(1) {
+    @apply flex justify-center items-center;
+  }
+  .profile > div:nth-child(1) > div {
+    @apply w-[140px] h-[140px] rounded-md
+  }
+
+
+  .profile > div:nth-child(2) > h1 {
+    @apply mt-[10px] flex justify-center text-[20px]
+  }
+  .profile > div:nth-child(2) > p {
+    @apply mt-[10px] flex justify-center
+  }
+  .profile > div:nth-child(2) > div {
+    @apply mt-[10px] flex justify-center
+  }
+  .profile > div:nth-child(2) > div > button {
+    @apply px-[4px]
+  }
+}
+
