@@ -13,8 +13,7 @@ function Page(){
 
   useEffect(() => {
     getData().then((res)=>{
-      if(res.status == 200){
-        console.log(res.data)
+      if(res.status == 200) {
         setData(res.data)
         setVisible(true)
       } else {
@@ -35,7 +34,7 @@ function Page(){
 }
 
 const getData = async ()=>{
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/book");
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/book",{ cache: "no-store" });
   return res.json();
 }
 

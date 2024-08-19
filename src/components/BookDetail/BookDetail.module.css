@@ -9,15 +9,14 @@
     @apply w-[140px] h-[140px] rounded-md
   }
 
-  .book_detail > div:nth-child(2) > div {
-    @apply flex items-center;
-  }
-  .book_detail > div:nth-child(2) > div > h1 {
+  .book_detail > div:nth-child(2) > h1 {
     @apply text-[20px]
   }
-  .book_detail > div:nth-child(2) > div > span {
+
+  .book_detail > div:nth-child(2) > span {
     @apply flex items-center text-nowrap
   }
+
   .book_detail > div:nth-child(2) > p {
     @apply mt-[10px]
   }
@@ -41,14 +40,11 @@
     @apply w-[140px] h-[140px] rounded-md
   }
 
-  .book_detail > div:nth-child(2) > div {
-    @apply flex items-center;
-  }
-  .book_detail > div:nth-child(2) > div > h1 {
+  .book_detail > div:nth-child(2) > h1 {
     @apply text-[20px]
   }
-  .book_detail > div:nth-child(2) > div > span {
-    @apply flex items-center text-nowrap
+  .book_detail > div:nth-child(2) > span {
+    @apply flex items-center
   }
   .book_detail > div:nth-child(2) > p {
     @apply mt-[10px]
@@ -66,13 +62,10 @@
     @apply w-[140px] h-[140px] rounded-md
   }
 
-  .book_detail > div:nth-child(2) > div {
-    @apply mt-[10px]
+  .book_detail > div:nth-child(2) > h1 {
+    @apply mt-[10px] flex justify-center text-[20px]
   }
-  .book_detail > div:nth-child(2) > div > h1 {
-    @apply flex justify-center text-[20px]
-  }
-  .book_detail > div:nth-child(2) > div > span {
+  .book_detail > div:nth-child(2) > span {
     @apply flex justify-center items-center
   }
   .book_detail > div:nth-child(2) > p {

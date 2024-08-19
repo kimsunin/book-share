@@ -16,8 +16,7 @@ function Page() {
     let authentication = false;
     let id = localStorage.getItem("id");
     if(id) {
-      let res = await getData(id)
-      console.log(res);
+      let res = await getData(id);
       if (res.status == 200) {
         setData(res.data);
         setVisible(true);
@@ -29,20 +28,21 @@ function Page() {
     while (!authentication) {
       let res = await prompt("학번입력");
       if (res !== null) {
-        let response = await getData(res)
-        if (response.status == 200) {
-          localStorage.setItem("id", res);
-          setData(response.data);
-          setVisible(true)
-          authentication = true
-        } else {
-          await alert("로그인 실패")
+        if(res !== "") {
+          let response = await getData(res)
+          if (response.status == 200) {
+            localStorage.setItem("id", res);
+            setData(response.data);
+            setVisible(true)
+            authentication = true
+          } else {
+            await alert("로그인 실패")
+          }
         }
       } else {
         router.back();
-        authentication = false;
+        authentication = true;
       }
-      ;
     }
   };
 
@@ -66,7 +66,7 @@ function Page() {
 
 
 const getData = async (id: string) => {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/account/${id}`);
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/account/${id}`, { cache: "no-store" });
   return await res.json();
 };
 

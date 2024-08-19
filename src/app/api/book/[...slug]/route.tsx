@@ -2,7 +2,6 @@ import {NextRequest, NextResponse} from "next/server";
 import {supabase} from "@/utils/supabase";
 
 export async function GET(req: NextRequest, {params}: { params: { slug: string[] } }): Promise<any> {
-  console.log(params.slug[0]);
 
   let {data, error} = await supabase.from('book')
     .select('*')

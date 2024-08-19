@@ -10,7 +10,6 @@ export async function GET( req: NextRequest,{params}: { params: { id: string } }
     .select("*").eq("id", id).single();
 
   datas.userData = data;
-  console.log(1, datas)
 
   if(data) {
     let {data, error} = await supabase
@@ -19,7 +18,6 @@ export async function GET( req: NextRequest,{params}: { params: { id: string } }
       .eq("student_id", id);
 
     datas.rentData = data;
-    console.log(2, datas)
 
 
     if (data) {
@@ -33,8 +31,6 @@ export async function GET( req: NextRequest,{params}: { params: { id: string } }
             datas.bookData.push(data[0])
           }
         }
-
-      console.log(3, datas)
 
       return NextResponse.json({data: datas, message: "success", status: 200});
 

@@ -14,12 +14,8 @@ function Page({params}: { params: { slug: string[] } }) {
   useEffect(() => {
     if (params.slug) {
       getData(params.slug[0]).then((res) => {
-        if (res.status == 200) {
-          setData(res.data)
-          setVisible(true)
-        } else {
-          alert(res.message).then(() => router.back());
-        }
+        setData(res.data)
+        setVisible(true)
       });
     }
   }, []);
@@ -35,7 +31,7 @@ function Page({params}: { params: { slug: string[] } }) {
 }
 
 const getData = async (slug: string) => {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/book/${slug}`);
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/book/${slug}`, { cache: "no-store" });
   return await res.json();
 };
 

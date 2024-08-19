@@ -18,17 +18,21 @@ function BookRent({bookId, state}: PropsType) {
   const onSubmit = () => {
     let userId = localStorage.getItem("id");
     if (userId) {
-      confirm("도서를 대출하시겠습니까 ?").then((res)=>{
-        rent(userId, bookId).then((res) => {
-          if (res.status === 200) {
-            alert(res.message).then(() => {
-              router.push("/account");
-            });
-          } else {
-            alert(res.message)
-          }
-        });
+      confirm("도서를 대출하시겠습니까").then((res)=>{
+        if (res) {
+          rent(userId, bookId).then((res) => {
+            if (res.status === 200) {
+              alert(res.message).then(() => {
+                router.push("/account");
+              });
+            } else {
+              alert(res.message)
+            }
+          });
+        }
       });
+    } else {
+      alert("로그인후 가능합니다")
     }
   };
 
