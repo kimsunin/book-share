@@ -50,7 +50,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-
       #4. docker pull and run
       - name: Pull and Run
         uses: appleboy/ssh-action@master
