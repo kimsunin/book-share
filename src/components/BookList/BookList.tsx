@@ -36,8 +36,8 @@ function BookList({props}: PropsType) {
     )
   );
 
-  if(!props){
-    return <p className="text-[14px]">도서가 존재하지 않습니다</p>
+  if (props?.length == 0) {
+    return <p className="text-[14px]">도서가 존재하지 않습니다</p>;
   }
 
   return <ul className={styles.book_list}>

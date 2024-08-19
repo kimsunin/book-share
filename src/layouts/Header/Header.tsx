@@ -19,13 +19,10 @@ function Header() {
   };
 
 
-
   return <header className={styles.header}>
     <div>
       <div>
-        <span>
-            BOOK-SHARE
-          </span>
+        <Link href="/">BOOK-SHARE</Link>
       </div>
       <div>
         <button onClick={() => setIsClick(!isClick)}><SearchIc/></button>

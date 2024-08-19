@@ -6,14 +6,14 @@
   @apply w-full h-[40px] flex justify-between items-center
 }
 
-.header > div > div > span {
-  @apply text-[20px]
+.header > div > div:nth-child(1) > a {
+  @apply h-[40px] text-[20px] px-[4px]
 }
 
 .header > div > div > button {
   @apply w-[40px] h-[40px]
 }
-.header > div > div > a {
+.header > div > div:nth-child(2) > a {
   @apply w-[40px] h-[40px]
 }
 

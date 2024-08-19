@@ -13,9 +13,14 @@ function Page({params}: { params: { slug: string[] } }) {
 
   useEffect(() => {
     if (params.slug) {
+
       getData(params.slug[0]).then((res) => {
-        setData(res.data)
-        setVisible(true)
+        if (res.status == 200) {
+          setData(res.data)
+          setVisible(true)
+        } else {
+          alert(res.message).then(() => router.back());
+        }
       });
     }
   }, []);
