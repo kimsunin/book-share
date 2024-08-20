@@ -8,7 +8,24 @@ import CircleIc from "./circle.svg"
 import RentIc from "./rent.svg"
 import GithubIc from "./github.svg"
 import EmailIc from "./email.svg"
+import DotIc from "./dot.svg"
+import RightIc from "./right.svg"
+import LeftIc from "./left.svg"
 
-export {PersonIc, SearchIc, HomeIc, SunIc, MoonIc, ErrorImgIc, CircleIc, RentIc, GithubIc, EmailIc};
+export {
+  PersonIc,
+  SearchIc,
+  HomeIc,
+  SunIc,
+  MoonIc,
+  ErrorImgIc,
+  CircleIc,
+  RentIc,
+  GithubIc,
+  EmailIc,
+  DotIc,
+  RightIc,
+  LeftIc
+};
 
 

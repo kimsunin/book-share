@@ -19,7 +19,7 @@ function Page({params}: { params: { id: string } }) {
         setData(res.data)
         setVisible(true)
       } else {
-        alert(res.error).then(() =>
+        alert(res.message).then(() =>
           router.back());
       }
     })

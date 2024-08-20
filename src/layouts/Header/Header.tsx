@@ -15,7 +15,7 @@ function Header() {
 
   const onSubmit = (e: any) => {
     e.preventDefault();
-    router.push(`/book/${value}`);
+    router.push(`/book/1/${value}`);
   };
 
 

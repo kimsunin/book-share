@@ -1,20 +1,6 @@
 import {supabase} from "@/utils/supabase";
 import {NextRequest, NextResponse} from "next/server";
 
-export async function GET(req: NextRequest) {
-  let {data, error} = await supabase
-    .from('book')
-    .select('*')
-    .range(0, 9);
-
-  if(data){
-    return NextResponse.json({data: data, message: "success", status: 200});
-  } else {
-    return NextResponse.json({error:error, message:"false", status: 404});
-  }
-}
-
-
 export async function POST(req: NextRequest) {
   let request = await req.json();
   let {data, error} = await supabase
