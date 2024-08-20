@@ -3,11 +3,12 @@ import {supabase} from "@/utils/supabase";
 
 export async function GET(req: NextRequest, {params}: { params: { slug: string[] } }): Promise<any> {
   if(params.slug[1] == "undefined") {
-    console.log("hello")
     let {data, error} = await supabase
       .from('book')
       .select('*')
       .range(Number(params.slug[0]) * 10 - 10, Number(params.slug[0]) * 10 - 1);
+
+    console.log(data)
 
     if (data) {
       return NextResponse.json({data: data, message: "success", status: 200});

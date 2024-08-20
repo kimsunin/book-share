@@ -6,9 +6,10 @@ import {useRouter} from "next/navigation";
 type PropsType = {
   p?:number,
   q?:string
+  lastPage:boolean
 }
 
-function Pagination({p, q}: PropsType) {
+function Pagination({p, q, lastPage}: PropsType) {
   const router = useRouter();
 
   return <div className={styles.pagination}>
@@ -18,7 +19,11 @@ function Pagination({p, q}: PropsType) {
       }
     }}><LeftIc/></button>
     <DotIc/>
-    <button onClick={() => router.push(`/book/${Number(p) + 1}/${q ? `${q}` : ""}`)}><RightIc/></button>
+    <button onClick={() => {
+      if(!lastPage) {
+        router.push(`/book/${Number(p) + 1}/${q ? `${q}` : ""}`)
+      }
+    }}><RightIc/></button>
   </div>;
 }
 

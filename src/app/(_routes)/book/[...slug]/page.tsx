@@ -11,10 +11,14 @@ function Page({params}: { params: { slug: string[] } }) {
 
   const [data, setData] = useState();
   const [visible, setVisible] = useState(false);
+  const [lastPage, setLastPage] = useState(false);
 
   useEffect(() => {
     if (params.slug) {
       getData(params.slug).then((res) => {
+        if (res.data.length < 10) {
+          setLastPage(true);
+        }
         if (res.status == 200) {
           setData(res.data)
           setVisible(true)
@@ -31,7 +35,7 @@ function Page({params}: { params: { slug: string[] } }) {
       <h1>도서정보 {params.slug[1] && `(${decodeURI(params.slug[1])})`}</h1>
       <hr/>
       <BookList props={data}/>
-      <Pagination p={Number(params?.slug[0])} q={params?.slug[1]}/>
+      <Pagination p={Number(params?.slug[0])} q={params?.slug[1]} lastPage={lastPage}/>
     </article>
   </section>;
 }
