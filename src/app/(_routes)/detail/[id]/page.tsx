@@ -35,7 +35,7 @@ function Page({params}: { params: { id: string } }) {
 }
 
 const getData = async(id:string) =>{
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/detail/" + id, { cache: "no-store" });
+  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + `/detail/${id}`, { cache: "no-store" });
   return res.json();
 }
 
