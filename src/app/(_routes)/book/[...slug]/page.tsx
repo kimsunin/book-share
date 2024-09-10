@@ -16,10 +16,10 @@ function Page({params}: { params: { slug: string[] } }) {
   useEffect(() => {
     if (params.slug) {
       getData(params.slug).then((res) => {
-        if (res.data.length < 10) {
-          setLastPage(true);
-        }
         if (res.status == 200) {
+          if (res.data.length < 10) {
+            setLastPage(true);
+          }
           setData(res.data)
           setVisible(true)
         } else {
